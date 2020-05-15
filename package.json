@@ -1,0 +1,25 @@
+{
+  "name": "csudh-catalogscraper",
+  "version": "1.0.0",
+  "description": "A scraper for the CSUDH class catelog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucidreline/csudh-catalogscraper.git"
+  },
+  "keywords": [
+    "scraper"
+  ],
+  "author": "Lucidreline",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucidreline/csudh-catalogscraper/issues"
+  },
+  "homepage": "https://github.com/Lucidreline/csudh-catalogscraper#readme",
+  "dependencies": {
+    "puppeteer": "^3.0.4"
+  }
+}
