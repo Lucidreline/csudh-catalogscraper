@@ -25,12 +25,13 @@ grabCourses = _url => {
       const body = $('.programTables table'); // finds the div that holds all of the tables in the catalog
 
       let courseList = [];
-
+      let id = -1
       body.each((i, table) => {
         const tableRow = $(table).children('tbody').children('tr');
-        tableRow.each((i, row) => {
+        tableRow.each((j, row) => {
+	  id++
           courseList.push({
-            id: i,
+            id,
             name: $(row).find('.sc-coursetitle').text(),
             number: $(row).find('.sc-coursenumber').text(),
             credits: $(row).find('.credits').text(),
