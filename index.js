@@ -4,7 +4,9 @@ const cheerio = require('cheerio'); // lets us parse the html
 const express = require('express');
 const app = express();
 
-app.get('/', async (req, res) =>
+var cors = require('cors')
+
+app.get('/', cors(), async (req, res) =>
   res.json({ courses: await grabCourses(req.query.url) })
 );
 
