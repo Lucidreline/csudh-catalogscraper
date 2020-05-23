@@ -4,7 +4,7 @@ const cheerio = require('cheerio'); // lets us parse the html
 const express = require('express');
 const app = express();
 
-var cors = require('cors')
+var cors = require('cors');
 
 app.get('/', cors(), async (req, res) =>
   res.json({ courses: await grabCourses(req.query.url) })
@@ -30,8 +30,9 @@ grabCourses = _url => {
         const tableRow = $(table).children('tbody').children('tr');
         tableRow.each((i, row) => {
           courseList.push({
-            name: $(row).find('.sc-coursenumber').text(),
-            number: $(row).find('.sc-coursetitle').text(),
+            id: i,
+            name: $(row).find('.sc-coursetitle').text(),
+            number: $(row).find('.sc-coursenumber').text(),
             credits: $(row).find('.credits').text(),
           });
         });
